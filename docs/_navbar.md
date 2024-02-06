@@ -13,6 +13,15 @@
 * 分布式
   * [Zookeeper](Zookeeper/Zookeeper.md)
   * [Dubbo](Dubbo/Dubbo.md)
+  * [Seata](SpringCloud/Seata.md)
+  * [Nacos](SpringCloud/Nacos.md)
+  * [Sentinel](SpringCloud/Sentinel.md)
+  * [Gateway](SpringCloud/Gateway.md)
+  * [Openfeign](SpringCloud/Openfeign.md)
+  * [Hystrix](SpringCloud/Hystrix.md)
+  * [Eureka](SpringCloud/Eureka.md)
+  * [Sleuth](SpringCloud/Sleuth.md)
+  * [Zipkin](SpringCloud/Zipkin.md)
 
 * 框架
   * [Spring](Spring/Spring.md)
