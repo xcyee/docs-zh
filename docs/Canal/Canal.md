@@ -26,11 +26,7 @@ AUTO_INCREMENT 字段的表被更新时；执行 INSERT DELAYED 语句时；用 
 
 ## Mysql主从复制工作原理
 
-- master将数据改变记录到`二进制日志（binary log）`中。
-- 当slave上执行 `start slave` 命令之后，slave会创建一个 `IO 线程`用来连接master，请求master中的binlog。
-- 当slave连接master时，master会创建一个 `log dump 线程`，用于发送 binlog 的内容。在读取 binlog 的内容的操作中，会对主节点上的 binlog 加锁，当读取完成并发送给从服务器后解锁。
-- IO 线程接收主节点 binlog dump 进程发来的更新之后，保存到 `中继日志（relay log）` 中。
-- slave的`SQL线程`，读取relay log日志，并解析成具体操作，从而实现主从操作一致，最终数据一致。
+![](.Canal_images/ae815e44.png)
 
 
 ## Canal 的工作原理
@@ -40,14 +36,14 @@ AUTO_INCREMENT 字段的表被更新时；执行 INSERT DELAYED 语句时；用 
 ## 应用场景
 
 ### 场景1：更新缓存
-![img.png](img.png)
+![](.Canal_images/95ec8d77.png)
 
 ### 场景 2：
   
 抓取业务表的新增变化数据，用于制作实时统计（我们就是这种场景）
 
 ## TCP模式
-![img_1.png](img_1.png)
+![](.Canal_images/567cb112.png)
 
 ```java
 public class CanalClient {
