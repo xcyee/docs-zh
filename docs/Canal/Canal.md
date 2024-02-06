@@ -38,7 +38,7 @@ AUTO_INCREMENT 字段的表被更新时；执行 INSERT DELAYED 语句时；用 
 ### 场景1：更新缓存
 ![](.Canal_images/95ec8d77.png)
 
-### 场景 2：
+### 场景 2：实时统计
   
 抓取业务表的新增变化数据，用于制作实时统计（我们就是这种场景）
 
@@ -127,3 +127,4 @@ public class CanalClient {
 ```
 
 ## Kafka模式
+也可以直接连接Kafka，推送到其队列中
